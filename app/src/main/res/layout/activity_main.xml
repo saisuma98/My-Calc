@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center">
+
+
+    <Button
+        android:text="Clear"
+        android:layout_alignParentRight="true"
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:onClick="clearButton"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/clear_button"
+        />
+    
+    
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_below="@id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom">
+        
+        <EditText
+            android:hint="A"
+            android:id="@+id/textA"
+            android:textSize="50dp"
+            android:gravity="center|bottom"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:hint="Res"
+            android:id="@+id/result"
+            android:textColor="#1E90FF"
+            android:gravity="center"
+            android:textSize="75dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/textB"
+            android:layout_toRightOf="@id/textA"/>
+
+        <EditText
+            android:hint="B"
+            android:gravity="center"
+            android:id="@+id/textB"
+            android:textSize="50dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:inputType="number"/>
+        
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/fakeID"
+        android:layout_below="@id/topLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"/>
+    
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/gcd"
+            android:text="gcd of a and b"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:textSize="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textColor="@color/colorButtonText"
+            android:background="@drawable/res_button"
+            android:onClick="calculateGcd"/>
+
+        <Button
+            android:id="@+id/inverse1"
+            android:text="inverse of a mod b"
+            android:layout_marginTop="16dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_below="@id/gcd"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorButtonText"
+            android:background="@drawable/res_button"
+            android:onClick="calculateInverseAB"/>
+
+
+        <Button
+            android:id="@+id/inverse2"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/inverse1"
+            android:text="inverse of b mod a"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorButtonText"
+            android:background="@drawable/res_button"
+            android:layout_marginBottom="15dp"
+            android:onClick="calculateInverseBA"/>
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
